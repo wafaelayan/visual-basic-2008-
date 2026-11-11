@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مراجعة في لغة الفيجوال بيسك للصف الثاني عشر</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;--bg:#f3f0ff;--card:#fff;--tx:#1f1744;--mut:#6a628f;--pri:#5b3df5;--pri2:#ece8ff;--ok:#12805c;--okbg:#dcf8ec;--no:#c8334f;--nobg:#ffe6ec;--bd:#e0daf7;--code:#1a1238;--codetx:#efeaff;--sh:0 10px 30px rgba(91,61,245,.12);--g:linear-gradient(135deg,#4a2bd8,#7b4dff 55%,#ff6fb1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120d26;--card:#1c1536;--tx:#f1edff;--mut:#a9a0d0;--pri:#a38bff;--pri2:#2a2050;--ok:#5fe0a8;--okbg:#103629;--no:#ff8da3;--nobg:#3d1a28;--bd:#352a5c;--code:#0b0719;--sh:0 10px 30px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#120d26;--card:#1c1536;--tx:#f1edff;--mut:#a9a0d0;--pri:#a38bff;--pri2:#2a2050;--ok:#5fe0a8;--okbg:#103629;--no:#ff8da3;--nobg:#3d1a28;--bd:#352a5c;--code:#0b0719;--sh:0 10px 30px rgba(0,0,0,.35)}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Tajawal',Tahoma,'Segoe UI',sans-serif;line-height:1.75;font-size:17px;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:740px;margin:0 auto;padding:0 16px 40px}
+.hero{background:var(--g);color:#fff;text-align:center;padding:34px 20px 62px;margin:0 -16px;border-radius:0 0 34px 34px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero:before{width:180px;height:180px;top:-60px;left:-40px}.hero:after{width:120px;height:120px;bottom:-40px;right:-20px}
+.ico{width:64px;height:64px;margin:0 auto 10px;border-radius:20px;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:2rem;backdrop-filter:blur(4px)}
+h1{font-size:1.65rem;margin:4px 0 14px;line-height:1.5;position:relative}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;position:relative}
+.chips span{background:rgba(255,255,255,.2);border-radius:20px;padding:3px 14px;font-size:.9rem;font-weight:700}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:24px;margin-top:-34px;box-shadow:var(--sh);position:relative}
+#quiz,#end{margin-top:-34px}
+label{font-weight:700}
+input[type=text]{width:100%;font:inherit;padding:13px 16px;border:2px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--tx);margin:8px 0 14px;outline:0;transition:.2s}
+input[type=text]:focus{border-color:var(--pri);box-shadow:0 0 0 4px var(--pri2)}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:13px 26px;background:var(--g);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(91,61,245,.3);transition:transform .15s}
+button:hover:not([disabled]){transform:translateY(-2px)}
+.sub{color:var(--mut);margin:0 0 14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--mut);font-size:.95rem;font-weight:700}
+.bar{height:10px;background:var(--pri2);border-radius:10px;margin:12px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--g);border-radius:10px;transition:width .4s}
+.q{font-size:1.2rem;font-weight:800;margin:16px 0 12px}
+pre{direction:ltr;text-align:left;background:var(--code);color:var(--codetx);padding:16px 18px;border-radius:14px;overflow-x:auto;font-size:.95rem;line-height:1.7;margin:12px 0;font-family:Consolas,Menlo,monospace;border-right:5px solid #ff6fb1}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:right;background:var(--bg);color:var(--tx);border:2px solid var(--bd);margin:10px 0;font-weight:500;box-shadow:none;padding:12px 14px}
+.opt .lt{flex:none;width:34px;height:34px;border-radius:10px;background:var(--pri2);color:var(--pri);display:grid;place-items:center;font-weight:800}
+.opt.code{direction:ltr;text-align:left;font-family:Consolas,Menlo,monospace;font-size:.95rem}
+.opt:not([disabled]):hover{border-color:var(--pri);background:var(--pri2)}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.opt.ok .lt{background:var(--ok);color:#fff}
+.opt.no{background:var(--nobg);border-color:var(--no);color:var(--no)}
+.opt.no .lt{background:var(--no);color:#fff}
+.fb{margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--pri2);border-right:5px solid var(--pri)}
+.ring{--p:0%;width:170px;height:170px;border-radius:50%;margin:6px auto 14px;background:conic-gradient(#ff6fb1 var(--p),var(--pri2) 0);display:grid;place-items:center}
+.ring .in{width:136px;height:136px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2}
+.ring b{font-size:2.8rem;color:var(--pri)}.ring small{color:var(--mut);font-weight:700}
+.rev{border-top:1px solid var(--bd);padding:14px 0}
+.hide{display:none}
+.tag{display:inline-block;background:var(--pri2);color:var(--pri);border-radius:20px;padding:2px 14px;font-size:.85rem;font-weight:800}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero"><div class="ico">💻</div><h1>مراجعة في لغة الفيجوال بيسك للصف الثاني عشر</h1><div class="chips"><span>أسئلة متنوعة</span><span>تصحيح فوري مع الشرح</span><span>الدرجة من 20</span></div></header>
+
+<section id="start" class="card">
+<label for="nm"><b>اسم الطالبة</b></label>
+<input type="text" id="nm" placeholder="اكتبي اسمك هنا">
+<p class="sub">عدد الأسئلة <b id="cnt"></b> سؤالاً بمهارات متنوعة، ستظهر درجتك في نهاية المراجعة.</p>
+<p><button id="go">ابدئي المراجعة</button></p>
+</section>
+
+<section id="quiz" class="card hide">
+<div class="row"><span id="num"></span><span class="tag" id="skill"></span></div>
+<div class="bar"><i id="pb"></i></div>
+<div class="q" id="qt"></div>
+<pre id="qc" class="hide"></pre>
+<div id="ops"></div>
+<div id="fb" class="fb hide"></div>
+<p><button id="nx" class="hide">التالي</button></p>
+</section>
+
+<section id="end" class="card hide">
+<p id="who" style="text-align:center;margin:0"></p>
+<div class="ring" id="ring"><div class="in"><b id="sc"></b><small>من 20</small></div></div>
+<p id="msg" style="text-align:center;font-weight:700"></p>
+<div id="rv"></div>
+<p style="text-align:center"><button id="rs">أعيدي المراجعة</button></p>
+</section>
+</div>
+
+<script>
+// k: المهارة | t: السؤال | c: كود | o: الخيارات (الأولى هي الصحيحة) | e: الشرح | L: خيارات كود
+var Q=[
+{k:'الإعلان عن الثوابت',t:'أي تعليمة تعلن ثابتاً اسمه x وقيمته wafra؟',L:1,o:['Const x = "wafra"','Const x = wafra','Dim x = "wafra"','Const "wafra" = x'],e:'صيغة الثابت: Const اسم الثابت = قيمة الثابت. والقيمة النصية تُحاط بعلامتي اقتباس.'},
+{k:'الإعلان عن الثوابت',t:'أي تعليمة تعلن ثابتاً اسمه programmer وقيمته "Ali"؟',L:1,o:['Const programmer = "Ali"','Const programmer = Ali','Dim programmer = "Ali"','Const "Ali" = programmer'],e:'Const ثم اسم الثابت ثم = ثم قيمته.'},
+{k:'الإعلان عن المتغيرات',t:'أي تعليمة تعلن المتغير block من نوع integer على مستوى النموذج؟',L:1,o:['Dim block As Integer','Dim block As String','Const block As Integer','Dim Integer As block'],e:'المتغير يُعلن بـ Dim ثم الاسم ثم As ثم النوع، وتوضع خارج الإجراءات ليكون على مستوى النموذج.'},
+{k:'المتغيرات على مستوى المشروع',t:'في Module1 تريدين الإعلان عن متغير اسمه total نوعه integer على مستوى المشروع. ما الصحيح؟',L:1,o:['Public total As Integer','Dim total As Integer','Const total As Integer','Public total As String'],e:'نكتب Public داخل الوحدة النمطية ليراه كل نماذج المشروع.'},
+{k:'النماذج والوحدات',t:'من أي قائمة نضيف إلى المشروع وحدة نمطية جديدة (Module)؟',o:['Project ← Add Module','File ← Exit','Debug ← Start','Edit ← Paste'],e:'من قائمة Project نختار Add Module للوحدة النمطية، أو Add Windows Form للنموذج.'},
+{k:'النماذج والوحدات',t:'من أي قائمة نضيف إلى المشروع نموذجاً جديداً (Form)؟',o:['Project ← Add Windows Form','File ← Exit','Debug ← Start','Edit ← Copy'],e:'من قائمة Project نختار Add Windows Form.'},
+{k:'الإسناد وقراءة الأدوات',t:'أي تعليمة تخصص اسم المستخدم المكتوب في TextBox1 للمتغير users؟',L:1,o:['users = TextBox1.Text','TextBox1.Text = users','users.Text = TextBox1','users == TextBox1.Text'],e:'الإسناد من اليمين إلى اليسار: القيمة على يمين = تُخزَّن في المتغير على اليسار.'},
+{k:'الجملة الشرطية If',t:'اختاري التعليمة الصحيحة للتأكد أن كلمة السر في TextBox2 تساوي 12، وإظهار رسالة إذا تحقق الشرط:',L:1,o:['If TextBox2.Text = 12 Then MsgBox("أهلاً بك")','If TextBox2 = 12 Then MsgBox("أهلاً بك")','If TextBox2.Text = 12 MsgBox("أهلاً بك") Then','If TextBox2.Text := 12 Then MsgBox("أهلاً بك")'],e:'الصيغة: If الشرط Then التعليمة التي تُنفَّذ إذا تحقق الشرط. نقارن خاصية Text للأداة بالقيمة.'},
+{k:'تتبع If',t:'ما ناتج الكود التالي إذا كتبت الطالبة 13 في TextBox2؟',c:'If TextBox2.Text = 12 Then MsgBox("أهلاً بك")',o:['لا تظهر أي رسالة','تظهر رسالة: أهلاً بك','يحدث خطأ','يُغلق البرنامج'],e:'الشرط غير متحقق (13 لا تساوي 12) فلا تُنفَّذ التعليمة التي بعد Then.'},
+{k:'إنهاء البرنامج',t:'أي تعليمة تُكتب في زر الخروج لإنهاء البرنامج؟',L:1,o:['End','Hide()','Form4.Show()','Label1.Text = End'],e:'التعليمة End توقف تنفيذ البرنامج بالكامل.'},
+{k:'جملة Select Case',t:'أكملي الكود ليظهر "انت الأول" عندما تكون قيمة views تساوي 1:',c:'Select Case views\n    ______ 1\n        MsgBox("انت الأول")\nEnd Select',L:1,o:['Case','If','When','Select'],e:'كل حالة داخل Select Case تبدأ بالكلمة Case.'},
+{k:'تتبع Select Case',t:'ما الرسالة التي تظهر عندما تكون views = 2؟',c:'Select Case views\n    Case 1\n        MsgBox("انت الأول")\n    Case 2\n        MsgBox("انت الثاني")\n    Case Else\n        MsgBox("غيرك")\nEnd Select',o:['انت الثاني','انت الأول','غيرك','لا شيء'],e:'القيمة 2 تطابق Case 2 فقط.'},
+{k:'عرض الثابت في Label',t:'أي تعليمة تُظهر قيمة الثابت programmer في الأداة Label1؟',L:1,o:['Label1.Text = programmer','Label1.Text = "programmer"','programmer = Label1.Text','Label1 = programmer'],e:'بدون علامتي اقتباس تُعرض قيمة الثابت، ومعهما يُعرض اسمه كنص حرفي.'},
+{k:'العدّادات',t:'أي تعليمة تضيف واحداً للمتغير count؟',L:1,o:['count = count + 1','count + 1 = count','count == count + 1','Add count 1'],e:'نحسب القيمة الجديدة ونخزنها في المتغير نفسه.'},
+{k:'الوقت والتاريخ',t:'أي تعليمة تُظهر الوقت الحالي في Label1؟',L:1,o:['Label1.Text = TimeString','Label1.Text = DateString','Label1.Text = "TimeString"','TimeString = Label1.Text'],e:'TimeString تعيد الوقت الحالي، وإذا وُضعت بين علامتي اقتباس تصبح نصاً عادياً.'},
+{k:'الوقت والتاريخ',t:'أي تعليمة تُظهر التاريخ الحالي في Label2؟',L:1,o:['Label2.Text = DateString','Label2.Text = TimeString','Label2.Text = "DateString"','DateString = Label2.Text'],e:'DateString تعيد تاريخ اليوم.'},
+{k:'التنقل بين النماذج',t:'أي تعليمة تُخفي النموذج الحالي؟',L:1,o:['Hide()','Show()','Form4.Show()','Hide.Form()'],e:'الإجراء Hide يخفي النموذج الحالي.'},
+{k:'التنقل بين النماذج',t:'أي تعليمة تُظهر النموذج الرابع Form4؟',L:1,o:['Form4.Show()','Form4.Hide()','Show.Form4()','Form4()'],e:'نكتب اسم النموذج ثم الإجراء Show.'},
+{k:'التنقل بين النماذج',t:'ما التسلسل الصحيح لإخفاء النموذج الحالي وإظهار Form4 عند الضغط على زر؟',L:1,o:['Hide()\nForm4.Show()','Form4.Show()\nForm4.Hide()','Show()\nForm4.Hide()','Form4.Hide()\nHide()'],e:'نخفي الحالي بـ Hide() ثم نُظهر الرابع بـ Form4.Show().'},
+{k:'حفظ المشروع',t:'ما الأمر الذي يحفظ المشروع بكل نماذجه ووحداته؟',o:['File ← Save All','File ← Exit','Debug ← Start','Edit ← Copy'],e:'الأمر Save All يحفظ جميع ملفات المشروع.'}
+];
+var st,order,i,sc,wrong;
+var $=function(x){return document.getElementById(x)};
+function shuf(a){a=a.slice();for(var j=a.length-1;j>0;j--){var r=Math.floor(Math.random()*(j+1));var t=a[j];a[j]=a[r];a[r]=t}return a}
+$('cnt').textContent=Q.length;
+function show(id){['start','quiz','end'].forEach(function(s){$(s).classList.toggle('hide',s!==id)});window.scrollTo(0,0)}
+function begin(){order=shuf(Q);i=0;sc=0;wrong=[];show('quiz');render()}
+function render(){
+ var q=order[i];
+ $('num').textContent='السؤال '+(i+1)+' من '+order.length;
+ $('skill').textContent=q.k;
+ $('pb').style.width=(i/order.length*100)+'%';
+ $('qt').textContent=q.t;
+ var c=$('qc');if(q.c){c.textContent=q.c;c.classList.remove('hide')}else c.classList.add('hide');
+ $('fb').classList.add('hide');$('nx').classList.add('hide');
+ var box=$('ops');box.innerHTML='';
+ shuf(q.o.map(function(t,n){return{t:t,r:n===0}})).forEach(function(op,n){
+  var b=document.createElement('button');b.className='opt'+(q.L?' code':'');
+  if(q.L)b.style.whiteSpace='pre-wrap';
+  var lt=document.createElement('span');lt.className='lt';lt.textContent='أبجد'[n];var tx=document.createElement('span');tx.textContent=op.t;b.appendChild(lt);b.appendChild(tx);b.onclick=function(){pick(b,op.r,q)};b._r=op.r;box.appendChild(b)});
+}
+function pick(b,ok,q){
+ var bs=document.querySelectorAll('#ops .opt');
+ bs.forEach(function(x){x.disabled=true;if(x._r)x.classList.add('ok')});
+ var f=$('fb');
+ if(ok){sc++;f.textContent='إجابة صحيحة! '+q.e}
+ else{b.classList.add('no');wrong.push(q);f.textContent='إجابة غير صحيحة. '+q.e}
+ f.classList.remove('hide');
+ $('nx').textContent=(i===order.length-1)?'عرض الدرجة':'التالي';$('nx').classList.remove('hide');
+}
+function finish(){
+ show('end');
+ var n=$('nm').value.trim();
+ $('who').textContent=n?('الطالبة: '+n):'';
+ var p=Math.round(sc/order.length*20*2)/2;
+ $('sc').textContent=p;$('ring').style.setProperty('--p',(p/20*100)+'%');
+ var pc=sc/order.length;
+ $('msg').textContent=(sc+' إجابة صحيحة من '+order.length+' — ')+(pc>=0.9?'ممتاز، أنتِ جاهزة للاختبار! 🌟':pc>=0.7?'جيد جداً، راجعي الأسئلة التي أخطأتِ فيها.':pc>=0.5?'مستوى مقبول، أعيدي المراجعة لتتقني الأفكار.':'تحتاجين إلى مزيد من التدرب، لا بأس، أعيدي المحاولة.');
+ var r=$('rv');r.innerHTML='';
+ if(wrong.length){var h=document.createElement('b');h.textContent='أسئلة تحتاج إلى مراجعة:';r.appendChild(h);
+  wrong.forEach(function(q){var d=document.createElement('div');d.className='rev';
+   var a=document.createElement('div');a.textContent=q.t;a.style.fontWeight='700';
+   var b=document.createElement('pre');b.textContent=q.o[0];
+   var c=document.createElement('div');c.textContent=q.e;c.style.color='var(--mut)';
+   d.appendChild(a);d.appendChild(b);d.appendChild(c);r.appendChild(d)})}
+}
+$('go').onclick=begin;
+$('nx').onclick=function(){if(i<order.length-1){i++;render()}else finish()};
+$('rs').onclick=function(){show('start')};
+</script>
+</body>
+</html>
